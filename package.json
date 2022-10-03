@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "start": "cd frontend && yarn",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
+    "clean": "rm -rf node_modules && rm -rf yarn.lock",
+    "server": "cd backend && ./gradlew run",
+    "client": "cd frontend && yarn dev"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5",
+    "ttab": "^0.7.3"
+  },
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
